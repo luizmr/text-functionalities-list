@@ -1,0 +1,625 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.container li {
+    list-style: none;
+    margin: 100px auto;
+}
+
+/* Capital Letter  */
+.capitalLetter {
+    max-width: 800px;
+}
+.capitalLetter .firstLetter {
+    color: blue;
+    float: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 50px;
+}
+
+.capitalLetter p:first-child::first-letter {
+    margin-right: 10px;
+    color: tomato;
+    float: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 50px;
+}
+
+/* BLEND */
+
+.blend {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.blend img {
+    position: absolute;
+}
+.blend h1 {
+    font-size: 75px;
+    mix-blend-mode: overlay;
+}
+
+/* Text Blend */
+
+.textBlend {
+    background: url("https://static.significados.com.br/foto/paisagem-natural-significados.jpg")
+        no-repeat center top;
+    background-size: cover;
+}
+.textBlend h1 {
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12vw;
+    font-weight: 900;
+    color: #000;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: screen;
+}
+
+/* Gradient text color */
+
+.gradient h1 {
+    font-size: 100px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ffae8f, #ff677d, #cd6684, #6f5a7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Image zoom hover */
+
+.imageZoom {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.imageZoom img {
+    width: 400px;
+    transition: all 1s linear;
+    border-radius: 10px;
+}
+.imageZoom img:hover {
+    transform: scale(1.2);
+    transition: all 0.5s linear;
+    cursor: pointer;
+}
+
+/* Neon Glow Effect using drop shadow and clip-path */
+
+/* .shadow {
+    margin-top: 30px;
+    filter: drop-shadow(10px 10px 200px #ff00ff)
+        drop-shadow(-10px -10px 50px #ff00ff);
+}
+.shadow .wrapper {
+    width: 30vw;
+    height: 400px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #ff00ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shadow .wrapper .design {
+    width: calc(30vw - 30px);
+    height: 400px;
+    background-color: #122436;
+    clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
+    margin-top: 10px;
+    filter: blur(115px) drop-shadow(-10px -10px 75px red);
+} */
+
+/* Neon Lightning Text */
+
+.neonText {
+    color: #fff;
+    font-family: Verdana;
+    font-weight: 500;
+    font-size: 50px;
+    text-shadow: -2px -2px 10px #fff, 2px 2px 10px #fff, 0 0 20px tomato,
+        0 0 40px tomato, 0 0 60px tomato;
+}
+
+/* Fadding Text */
+
+.faddingText .text h1 {
+    color: hotpink;
+    font-weight: 900;
+    font-size: 60px;
+}
+.faddingText .text {
+    color: #f45610;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+.faddingText .text p {
+    mix-blend-mode: screen;
+    position: relative;
+    margin-top: -20px;
+}
+.faddingText .text p::after {
+    background: linear-gradient(180deg, transparent, #fff 3rem) no-repeat bottom
+        center/100% 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.5s ease-out;
+}
+.faddingText .text p:hover::after {
+    background-size: 100% 0%;
+}
+.faddingText {
+    display: flex;
+    align-items: center;
+    font: 18px "Verdana";
+    justify-content: center;
+    min-height: 50vh;
+    position: relative;
+}
+
+/* Image Animation */
+
+.imageAnimation {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    margin-bottom: 300px;
+}
+.imageAnimation img {
+    border-radius: 20px;
+}
+.imageAnimation .imgOne {
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: Slideright 3s infinite;
+    animation-delay: 3s;
+}
+.imageAnimation .imgTwo,
+.imageAnimation .imgThree,
+.imageAnimation .imgFour {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imageAnimation .imgTwo {
+    animation: Slideleft 3s infinite;
+    animation-delay: 3s;
+}
+.imageAnimation .imgThree {
+    animation: Sliderights 3s infinite;
+    animation-delay: 3s;
+}
+.imageAnimation .imgFour {
+    animation: Slidelefts 3s infinite;
+    animation-delay: 3s;
+}
+
+@keyframes Slideright {
+    to {
+        transform: translateX(180px);
+    }
+}
+@keyframes Slideleft {
+    to {
+        transform: translateY(170px);
+    }
+}
+@keyframes Sliderights {
+    to {
+        transform: translateX(-180px);
+    }
+}
+@keyframes Slidelefts {
+    to {
+        transform: translateY(-170px);
+    }
+}
+
+/* Neumorphism Card */
+
+.containerCard {
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1500px;
+}
+.containerCard .nmCard {
+    width: 320px;
+    margin: 20px;
+    padding: 40px 30px;
+    background-color: #ebf5fc;
+    border-radius: 40px;
+    box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+        6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+.containerCard .nmCard:hover {
+    box-shadow: inset -6px -6px 20px rgba(255, 255, 255, 0.5),
+        inset 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+.containerCard .nmCard .imgCard {
+    position: relative;
+    text-align: center;
+}
+.containerCard .nmCard .imgCard img {
+    max-width: 120px;
+}
+.containerCard .nmCard .textCard {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+.containerCard .nmCard .textCard h2 {
+    color: #32a3b1;
+    font-weight: 700;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+}
+.containerCard .nmCard .textCard p {
+    color: #32a3b1;
+}
+.containerCard .nmCard .textCard a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 40px;
+    color: #32a3b1;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: -4px -4px 15px rgba(255, 255, 255, 0.5),
+        4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.containerCard .nmCard .textCard a:hover {
+    box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.5),
+        inset 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.containerCard .nmCard .textCard a:hover span {
+    display: block;
+    transform: scale(0.95);
+}
+.containerCard .nmCard:hover .imgCard,
+.containerCard .nmCard:hover .textCard {
+    transform: scale(0.95);
+}
+
+/* Video inside text */
+
+.videoInside {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+}
+.videoInside video {
+    width: 100%;
+}
+.videoInside svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.videoInside svg text {
+    font-family: "Balsamiq Sans";
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.videoInside svg rect {
+    fill: white;
+}
+.videoInside svg > rect {
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+}
+
+/* Profile card example */
+
+.profileContainer {
+    position: relative;
+    margin: auto;
+    width: 650px;
+    height: 250px;
+    background-image: url("https://images7.alphacoders.com/662/thumb-1920-662102.png");
+    background-size: cover;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.profileContainer .bottomBar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #151728;
+}
+.profileContainer .bottomBar .profile {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    bottom: 16px;
+    left: 24px;
+}
+.profileContainer .bottomBar .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #151728;
+}
+.profileContainer .bottomBar .profile img:hover {
+    border: 3px solid #1488fa;
+}
+.profileContainer .bottomBar .profile .profileName {
+    color: #fff;
+    background-color: #151728;
+    padding: 7px;
+    border-radius: 10px;
+    margin-left: 24px;
+    margin-bottom: 48px;
+    font-size: 22px;
+    font-family: Verdana;
+    font-weight: 500;
+}
+.profileContainer .bottomBar .profile .profileName:hover {
+    box-sizing: border-box;
+    border: 3px solid #1488fa;
+}
+.profileContainer .bottomBar .bottomMenu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding-left: 200px;
+    height: 100%;
+    z-index: 2;
+}
+.profileContainer .bottomBar .bottomMenu a {
+    cursor: pointer;
+    color: #5c5e6e;
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 25px 20px;
+    height: 100%;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.profileContainer .bottomBar .bottomMenu a:hover {
+    box-sizing: border-box;
+    color: #fff;
+    border-bottom: 5px solid #1488fa;
+}
+
+/* Modal window */
+
+.modal {
+    position: relative;
+    margin: auto;
+    background-color: #fff;
+    height: 225px;
+    width: 450px;
+    border-radius: 5px;
+    overflow: hidden;
+    border-bottom: 0.5px solid #e731cb;
+    border-right: 0.5px solid #e731cb;
+    border-left: 0.5px solid #e731cb;
+    box-sizing: border-box;
+}
+.modal .modalBar {
+    width: 100%;
+    height: 7px;
+    background-image: linear-gradient(to right, #e731cb, #7143e9);
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.modal .modalBar .fa-times {
+    float: right;
+    margin: 15px 10px;
+    color: #454545;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.modal .modalBar .fa-times:hover {
+    transform: scale(0.75);
+    color: #6b6b6b;
+}
+.modal .modalBar .modalText {
+    margin-top: 120px;
+    text-align: center;
+    width: 80%;
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal .modalBar .modalText h3 {
+    font-size: 18px;
+}
+.modal .modalBar .modalText p {
+    margin: 10px 0 20px 0;
+    font-size: 16px;
+    color: #454545;
+}
+.modal .modalBar .modalText button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    margin: 0 5px;
+    height: 40px;
+    cursor: pointer;
+}
+.modal .modalBar .modalText .button-yes {
+    background-color: #d231e7;
+    color: #fff;
+}
+.modal .modalBar .modalText .button-yes:hover {
+    /* background-image: none; */
+    background-color: #aa31e4;
+    transition: all 0.3s;
+}
+.modal .modalBar .modalText .button-no {
+    background-color: transparent;
+    color: #454545;
+    border: 1px solid #454545;
+}
+.modal .modalBar .modalText .button-no:hover {
+    box-sizing: border-box;
+    border: 1.2px solid black;
+    color: black;
+    transition: all 0.1s;
+}
+
+/* Product on sale badge */
+
+.saleContainer {
+    width: 300px;
+    position: relative;
+}
+.saleContainer img {
+    max-width: 100%;
+}
+.saleContainer .saleBadge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+.saleContainer .saleBadge span {
+    color: white;
+    padding: 7.5px 7.5px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    background-color: #ed1b24;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-30%) translateY(0%) rotate(-45deg);
+    transform-origin: top right;
+}
+.saleContainer .saleBadge span:before,
+.saleContainer .saleBadge span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    margin: 0 -1px;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    min-width: 55px;
+}
+.saleContainer .saleBadge span:before {
+    right: 100%;
+}
+.saleContainer .saleBadge span:after {
+    left: 100%;
+}
+
+/* Login Form */
+
+.login {
+    width: 480px;
+    margin: 16px auto;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.loginHeader,
+.login p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.loginTriangle {
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: #28d;
+}
+.loginHeader {
+    background: #28d;
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+.login .loginContainer {
+    background: #ebebeb;
+    padding: 12px;
+}
+.login p {
+    padding: 12px;
+}
+.login input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-size: 0.95em;
+}
+.login input[type="email"],
+.login input[type="password"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+}
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+    border-color: #bbb;
+}
+.login input[type="submit"] {
+    background: #28d;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.login input[type="submit"]:hover {
+    background: #17c;
+}
+.login input[type="submit"]:focus {
+    border-color: #05a;
+}
